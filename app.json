@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Meu App OAB",
+    "slug": "meu-app-oab",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#1A237E"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#1A237E"
+      }
+    },
+    "plugins": [
+      "expo-status-bar"
+    ]
+  }
+}
