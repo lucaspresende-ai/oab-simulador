@@ -1,3 +1,9 @@
 .venv
 .env
 __pycache__
+
+# Ignorar arquivos do Scraper da OAB
+PDF/
+.venv/
+__pycache__/
+controle.txt
