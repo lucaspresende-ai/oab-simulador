@@ -4,10 +4,16 @@ from supabase import create_client
 from dotenv import load_dotenv
 import os
 
+load_dotenv()
+
 supabase_key = os.getenv('SUPABASE_API_KEY')
 supabase_url = os.getenv('SUPABASE_URL')
 
-client = create_client(supabase_key, supabase_url)
+print(supabase_url)
+
+client = create_client(supabase_url, supabase_key)
+
+print('client criado')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DADOS = BASE_DIR / "dados_brutos"
@@ -21,10 +27,13 @@ for arquivo in arquivos:
         questoes = json.load(f)
 
     for questao in questoes:
+        questao['id'] = arquivo.stem + '.' + str(questao['id'])
+
         questao['alternativa_a'] = questao['alternativas'][0]
         questao['alternativa_b'] = questao['alternativas'][1]
         questao['alternativa_c'] = questao['alternativas'][2]
         questao['alternativa_d'] = questao['alternativas'][3]
-        
-        questao.remove('alternativas')
+
+        del questao['alternativas']
     
+    print(questoes[0])
