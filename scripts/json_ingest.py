@@ -35,5 +35,7 @@ for arquivo in arquivos:
         questao['alternativa_d'] = questao['alternativas'][3]
 
         del questao['alternativas']
+
+        # TO DO: jogar texto_pergunta para bucket e preencher supabase: caminho pra bucket
     
     print(questoes[0])
